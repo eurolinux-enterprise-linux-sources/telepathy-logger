@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TplCallEvent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<link rel="home" href="index.html" title="telepathy-logger Reference Manual">
+<link rel="up" href="ch-public.html" title="libtelepathy-logger API">
+<link rel="prev" href="TplTextEvent.html" title="TplTextEvent">
+<link rel="next" href="TplEntity.html" title="TplEntity">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="TplTextEvent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch-public.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">telepathy-logger Reference Manual</th>
+<td><a accesskey="n" href="TplEntity.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#TplCallEvent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#TplCallEvent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#TplCallEvent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#TplCallEvent.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="TplCallEvent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="TplCallEvent.top_of_page"></a>TplCallEvent</span></h2>
+<p>TplCallEvent — Representation of a call log event</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="TplCallEvent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="TplCallEvent.html#TplCallEvent-struct" title="TplCallEvent">TplCallEvent</a>;
+                    <a class="link" href="TplCallEvent.html#TplCallEventClass" title="TplCallEventClass">TplCallEventClass</a>;
+                    <a class="link" href="TplCallEvent.html#TplCallEventPriv" title="TplCallEventPriv">TplCallEventPriv</a>;
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="TplCallEvent.html#tpl-call-event-get-detailed-end-reason" title="tpl_call_event_get_detailed_end_reason ()">tpl_call_event_get_detailed_end_reason</a>
+                                                        (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GTimeSpan"><span class="returnvalue">GTimeSpan</span></a>           <a class="link" href="TplCallEvent.html#tpl-call-event-get-duration" title="tpl_call_event_get_duration ()">tpl_call_event_get_duration</a>         (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);
+<a class="link" href="TplEntity.html" title="TplEntity"><span class="returnvalue">TplEntity</span></a> *         <a class="link" href="TplCallEvent.html#tpl-call-event-get-end-actor" title="tpl_call_event_get_end_actor ()">tpl_call_event_get_end_actor</a>        (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);
+<a href="http://telepathy.freedesktop.org/doc/telepathy-glib-0.20.x/telepathy-glib-enums.html#TpCallStateChangeReason"><span class="returnvalue">TpCallStateChangeReason</span></a> <a class="link" href="TplCallEvent.html#tpl-call-event-get-end-reason" title="tpl_call_event_get_end_reason ()">tpl_call_event_get_end_reason</a>   (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="TplCallEvent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="TplEvent.html" title="TplEvent">TplEvent</a>
+         +----TplCallEvent
+</pre>
+</div>
+<div class="refsect1">
+<a name="TplCallEvent.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="TplCallEvent.html#TplCallEvent--detailed-end-reason" title='The "detailed-end-reason" property'>detailed-end-reason</a>"      <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="TplCallEvent.html#TplCallEvent--duration" title='The "duration" property'>duration</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read / Write / Construct Only
+  "<a class="link" href="TplCallEvent.html#TplCallEvent--end-actor" title='The "end-actor" property'>end-actor</a>"                <a class="link" href="TplEntity.html" title="TplEntity"><span class="type">TplEntity</span></a>*            : Read / Write / Construct Only
+  "<a class="link" href="TplCallEvent.html#TplCallEvent--end-reason" title='The "end-reason" property'>end-reason</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="TplCallEvent.description"></a><h2>Description</h2>
+<p>
+A subclass of <a class="link" href="TplEvent.html" title="TplEvent"><span class="type">TplEvent</span></a> representing a call log event.
+</p>
+</div>
+<div class="refsect1">
+<a name="TplCallEvent.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TplCallEvent-struct"></a><h3>TplCallEvent</h3>
+<pre class="programlisting">typedef struct _TplCallEvent TplCallEvent;</pre>
+<p>
+An object representing a call log event.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TplCallEventClass"></a><h3>TplCallEventClass</h3>
+<pre class="programlisting">typedef struct _TplCallEventClass TplCallEventClass;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TplCallEventPriv"></a><h3>TplCallEventPriv</h3>
+<pre class="programlisting">typedef struct _TplCallEventPriv TplCallEventPriv;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tpl-call-event-get-detailed-end-reason"></a><h3>tpl_call_event_get_detailed_end_reason ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       tpl_call_event_get_detailed_end_reason
+                                                        (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same string as the
+<a class="link" href="TplCallEvent.html#TplCallEvent--detailed-end-reason" title='The "detailed-end-reason" property'><span class="type">"detailed-end-reason"</span></a> property. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tpl-call-event-get-duration"></a><h3>tpl_call_event_get_duration ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GTimeSpan"><span class="returnvalue">GTimeSpan</span></a>           tpl_call_event_get_duration         (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same duration as the <a class="link" href="TplCallEvent.html#TplCallEvent--duration" title='The "duration" property'><span class="type">"duration"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tpl-call-event-get-end-actor"></a><h3>tpl_call_event_get_end_actor ()</h3>
+<pre class="programlisting"><a class="link" href="TplEntity.html" title="TplEntity"><span class="returnvalue">TplEntity</span></a> *         tpl_call_event_get_end_actor        (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same <a class="link" href="TplEntity.html" title="TplEntity"><span class="type">TplEntity</span></a>
+as <a class="link" href="TplCallEvent.html#TplCallEvent--end-actor" title='The "end-actor" property'><span class="type">"end-actor"</span></a> property. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="tpl-call-event-get-end-reason"></a><h3>tpl_call_event_get_end_reason ()</h3>
+<pre class="programlisting"><a href="http://telepathy.freedesktop.org/doc/telepathy-glib-0.20.x/telepathy-glib-enums.html#TpCallStateChangeReason"><span class="returnvalue">TpCallStateChangeReason</span></a> tpl_call_event_get_end_reason   (<em class="parameter"><code><a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TplCallEvent.html" title="TplCallEvent"><span class="type">TplCallEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same <a href="http://telepathy.freedesktop.org/doc/telepathy-glib-0.20.x/telepathy-glib-enums.html#TpCallStateChangeReason"><span class="type">TpCallStateChangeReason</span></a> as <a class="link" href="TplCallEvent.html#TplCallEvent--end-reason" title='The "end-reason" property'><span class="type">"end-reason"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="TplCallEvent.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="TplCallEvent--detailed-end-reason"></a><h3>The <code class="literal">"detailed-end-reason"</code> property</h3>
+<pre class="programlisting">  "detailed-end-reason"      <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>A string representing a D-Bus error that gives more details about the end reason.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TplCallEvent--duration"></a><h3>The <code class="literal">"duration"</code> property</h3>
+<pre class="programlisting">  "duration"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read / Write / Construct Only</pre>
+<p>The call duration in seconds.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TplCallEvent--end-actor"></a><h3>The <code class="literal">"end-actor"</code> property</h3>
+<pre class="programlisting">  "end-actor"                <a class="link" href="TplEntity.html" title="TplEntity"><span class="type">TplEntity</span></a>*            : Read / Write / Construct Only</pre>
+<p>Actor (a #TplEntity) that caused the call to end.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TplCallEvent--end-reason"></a><h3>The <code class="literal">"end-reason"</code> property</h3>
+<pre class="programlisting">  "end-reason"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write / Construct Only</pre>
+<p>Reason for wich this call was ended.</p>
+<p>Allowed values: [0,14]</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>
