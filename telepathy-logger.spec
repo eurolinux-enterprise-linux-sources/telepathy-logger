@@ -1,6 +1,6 @@
 Name:           telepathy-logger
 Version:        0.8.0
-Release:        2%{?dist}
+Release:        5%{?dist}
 Summary:        Telepathy framework logging daemon
 
 Group:          Applications/Communications
@@ -60,8 +60,8 @@ make install DESTDIR=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
-#check
-#make check
+%check
+make check
 
 
 %post -p /sbin/ldconfig
@@ -99,6 +99,16 @@ glib-compile-schemas --allow-any-name %{_datadir}/glib-2.0/schemas &>/dev/null |
 
 
 %changelog
+* Wed Feb 12 2014 Matěj Cepl <mcepl@redhat.com> - 0.8.0-5
+- Enable %check section.
+  Resolves: #1064378
+
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.8.0-4
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.8.0-3
+- Mass rebuild 2013-12-27
+
 * Fri Feb 15 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.8.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
